@@ -1,4 +1,4 @@
-const solution = (A: number, B: number, K: number): number => {
+const solution = (A, B, K) => {
   if (!K) return 0;
   if (!B) return 1;
   const totalDivisions = Math.floor(B / K);
