@@ -1,3 +1,5 @@
+
+// 100%
 const solution = (A) => {
   const numKeys = {}
   A.forEach(num => numKeys[num] = true)
@@ -14,4 +16,23 @@ const solution = (A) => {
       break;
   }
   return min
+};
+
+// 100%
+const solution3 = (A) => {
+  const numSet = new Set(A);
+
+  let min = 1;
+  while (numSet.has(min)) {
+    min++;
+  }
+
+  return min;
+};
+
+// 66%
+const solution2 = (A) => {
+  for (let i = 1; A.length; i++) {
+    if (!A.includes(i)) return i
+  }
 };
